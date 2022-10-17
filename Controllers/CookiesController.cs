@@ -20,9 +20,17 @@ namespace CookieJars.Controllers
         }
 
         // GET: Cookies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Cookie.ToListAsync());
+            var cookies = from c in _context.Cookie
+                         select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                cookies = cookies.Where(s => s.CookieName.Contains(searchString));
+            }
+
+            return View(await cookies.ToListAsync());
         }
 
         // GET: Cookies/Details/5

@@ -44,3 +44,9 @@ Date 2022-10-16
 	   I am so happy about it...
 	   fewwww...
 	   it is time to pull every thing
+
+12:58 I added search box for index by using cookies var
+	  in that method I used searchString so I edit my code in startup file to use that var
+	  time to pull...
+	  :)
+	  i am really enjoying it..

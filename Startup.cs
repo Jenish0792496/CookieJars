@@ -37,7 +37,7 @@ namespace CookieJars
             services.AddRazorPages();
 
             services.AddDbContext<MvcCookieJarsContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MvcCookieJarsContext")));
+                  options.UseSqlServer(Configuration.GetConnectionString("MvcCookieJarsContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

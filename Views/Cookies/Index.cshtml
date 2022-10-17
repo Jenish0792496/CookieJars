@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcCookieJars.Models.Cookie>
+﻿@model MvcCookieJars.Models.CookieGenereViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -12,8 +12,13 @@
 
 <form asp-controller="Cookies" asp-action="Index">
     <p>
-        Title: <input type="text" name="SearchString" />
+        <select asp-for="Ingridients" asp-items="Model.MainIngredents">
+            <option value="">All</option>
+        </select>
+
+        Title: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
+
     </p>
 </form>
 
@@ -21,28 +26,28 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CookieName)
+                @Html.DisplayNameFor(model => model.CookieName[0].CookieName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MainIngredents)
+                @Html.DisplayNameFor(model => model.CookieName[0].MainIngredents)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.DisplayNameFor(model => model.CookieName[0].ReleaseDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Pieces)
+                @Html.DisplayNameFor(model => model.CookieName[0].Pieces)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.CookieName[0].Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Rating)
+                @Html.DisplayNameFor(model => model.CookieName[0].Rating)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.CookieName) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CookieName)

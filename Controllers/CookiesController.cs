@@ -20,17 +20,34 @@ namespace CookieJars.Controllers
         }
 
         // GET: Cookies
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string Ingridients, string searchString)
         {
+            // Use LINQ to get list of genres.
+
             var cookies = from c in _context.Cookie
-                         select c;
+                          select c;
+
+            IQueryable<string> genreQuery = from c in _context.Cookie
+                                            orderby c.MainIngredents
+                                            select c.MainIngredents;
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 cookies = cookies.Where(s => s.CookieName.Contains(searchString));
             }
 
-            return View(await cookies.ToListAsync());
+            if (!string.IsNullOrEmpty(Ingridients))
+            {
+                cookies = cookies.Where(x => x.MainIngredents == Ingridients);
+            }
+
+            var cookiesGenereVM = new CookieGenereViewModel
+            {
+                MainIngredents = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                CookieName = await cookies.ToListAsync()
+            };
+
+            return View(cookiesGenereVM);
         }
 
         // GET: Cookies/Details/5

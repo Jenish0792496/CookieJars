@@ -50,3 +50,16 @@ Date 2022-10-16
 	  time to pull...
 	  :)
 	  i am really enjoying it..
+
+1:57 Finally added genere in my file 
+	 so, I added new class model file named CookieGenereViewModel
+	 in this class I added genere for Ingridients
+	 for showing my this filter in to the index page, edit code in controller page
+	 added a method in this file and created new var named cookiesGenereVM and assignd Mainingredents property
+	 and at the end I return the value of it in a view 
+	 ...
+	 now it time to change few codes in index file
+	 in this file to filter my genere I added CookieName[0] this between model and each properties
+	 :)
+	 when I checked my page it wasnt filter my geners ....
+	 so I rechecked my controllers,

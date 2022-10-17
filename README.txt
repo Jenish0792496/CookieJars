@@ -63,3 +63,9 @@ Date 2022-10-16
 	 :)
 	 when I checked my page it wasnt filter my geners ....
 	 so I rechecked my controllers,
+
+3:34 ohh Thank god I am using git hub 
+	 My Laptop switched off and i forgot to save it
+
+	 finally i am done with validation and all of these.....
+	 :)

@@ -20,8 +20,13 @@ namespace MvcCookieJars.Models
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
         public string Pieces { get; set; }
+        [Column(TypeName = "decimal(18, 2)")]
+
+        [Range(1, 100)]
+        [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
+        [Range(1, 5)]
         public int Rating { get; set; }
 
     }

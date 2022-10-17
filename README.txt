@@ -69,3 +69,12 @@ Date 2022-10-16
 
 	 finally i am done with validation and all of these.....
 	 :)
+
+Date:2022-10-17
+11:40  every thing done 
+       added few images with fictional context
+	   and some style.
+	   page looks good.
+	   time to pull.......
+	   :)
+

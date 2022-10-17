@@ -36,4 +36,11 @@
 
 Date 2022-10-16
 
-11:46 
+11:46  After a numerable a time I created project and deleted and many thing I am done with my scafollding and seed data 
+	   in between I did so many things and finally made new project name CookieJars
+	   and the same as above I made class in data then Scaffolding and then seed data and seed data initilaizer 
+	   and finally got what I want that...
+	   :)
+	   I am so happy about it...
+	   fewwww...
+	   it is time to pull every thing
